@@ -1,17 +1,17 @@
-.App{
+.app{
     background-color: var(--primary-color);
     font-family: var(--font-base);
 }
 
-.App_whitebg{
+.app_whitebg{
     background-color: var(--white-color);
 }
 
-.App_primarybg{
+.app_primarybg{
     background-color: var(--primary-color);
 }
 
-.App_container{
+.app_container{
     width: 100%;
     min-height: 100vh;
     display: flex;
