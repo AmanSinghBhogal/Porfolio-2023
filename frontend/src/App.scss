@@ -7,6 +7,18 @@
     font-family: var(--font-base);
 }
 
+.page__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-base);
+    color: var(--color-golden);
+    font-size: 64px;
+    line-height: 83.2px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+}
+
 .app_whitebg{
     background-color: var(--white-color);
 }
@@ -55,14 +67,15 @@
 }
 
 .head-text {
-    font-size: 2.75rem;
+    font-size: 2.3rem;
     font-weight: 800;
     text-align: center;
-    color: var(--color-golden);
+    color: var(--white-color);
+    letter-spacing: 2px;
     text-transform: capitalize;
 
     span {
-        color: var(--secondary-color);
+        color: var(--color-golden);
     }
 
     @media screen and (min-width: 2000px) {

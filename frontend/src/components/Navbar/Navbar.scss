@@ -48,8 +48,9 @@
             color: var(--white-color);
             text-decoration: none;
             text-transform: capitalize;
-            font-size: 1.1rem;
-            letter-spacing: 0.15em;
+            font-size: 1rem;
+            font-family: var(--font-alt);
+            // letter-spacing: 0.15em;
             transition: 0.5s ease;
 
             &:hover{
