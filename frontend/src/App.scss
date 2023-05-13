@@ -1,5 +1,9 @@
 .app{
-    background-color: var(--primary-color);
+    background: url('./assets/bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
     font-family: var(--font-base);
 }
 
@@ -8,7 +12,7 @@
 }
 
 .app_primarybg{
-    background-color: var(--primary-color);
+    background-color: var(--color-black);
 }
 
 .app_container{
@@ -46,7 +50,7 @@
 
     p {
         text-transform: uppercase;
-        color: var(--black-color);
+        color: var(--white-color);
     }
 }
 
@@ -54,7 +58,7 @@
     font-size: 2.75rem;
     font-weight: 800;
     text-align: center;
-    color: var(--black-color);
+    color: var(--color-golden);
     text-transform: capitalize;
 
     span {
@@ -71,9 +75,11 @@
 }
 
 .p-text {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
     text-align: left;
-    color: var(--gray-color);
+    color: var(--white-color);
+    // font-family: var(--font-alt);
     line-height: 1.5;
 
     @media screen and (min-width: 2000px) {
@@ -84,7 +90,7 @@
 .bold-text {
     font-size: 1rem;
     font-weight: 800;
-    color: var(--black-color);
+    color: var(--white-color);
     text-align: left;
 
     @media screen and (min-width: 2000px) {
@@ -108,7 +114,7 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background-color: var(--white-color);
+        background-color: var(--color-black);
         margin: 0.25rem 0;
         border: 1px solid var(--lightGray-color);
 

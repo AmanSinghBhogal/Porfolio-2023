@@ -4,10 +4,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 2rem;
-    background-color: rgba(255,255,255,0.25);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border: 1px solid rgba(255,255,255,0.18);
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     position: fixed;
     z-index: 2;
 }
@@ -17,9 +16,12 @@
     justify-content: flex-start;
     align-items: center;
     img{
-        width: 200px;
+        height: 70px;
         @media screen and (min-width: 2000px) {
             width: 300px;
+        }
+        @media screen and (max-width: 450px) {
+            height: 60px;
         }
     }
 }
@@ -43,20 +45,22 @@
         }
 
         a{
-            color: var(--gray-color);
+            color: var(--white-color);
             text-decoration: none;
-            text-transform: uppercase;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: all 0.3s ease-in-out;
+            text-transform: capitalize;
+            font-size: 1.1rem;
+            letter-spacing: 0.15em;
+            transition: 0.5s ease;
 
             &:hover{
-                color: var(--secondary-color);
+                color: var(--color-golden);
+                border-bottom: 1px solid var(--color-golden);
             }
         }
         &:hover{
             div{
-                background-color: var(--secondary-color);
+                background-color: var(--color-golden);
+                transition: all 0.3s ease-in-out;
             }
         }
     }
@@ -73,12 +77,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondary-color);
+    // background-color: var(--secondary-color);
+    background-color: var(--color-golden);
 
     svg{
         width: 70%;
         height: 70%;
-        color: var(--white-color);
     }
 
     div{
@@ -96,8 +100,8 @@
         width: 80%;
         height: 100vh;
 
-        background: url('../../assets/bgWhite.png');
-        background-color: var(--white-color);
+        // background: url('../../assets/bgWhite.png');
+        background-color: var(--color-black);
         background-size: cover;
         background-repeat: repeat;
 
@@ -106,7 +110,7 @@
         svg{
             width: 35px;
             height: 35px;
-            color: var(--secondary-color);
+            color: var(--color-golden);
             margin: 0.5rem 1rem;
         }
 
@@ -124,16 +128,17 @@
             li{
                 margin: 1rem;
                 a{
-                    color: var(--gray-color);
+                    font-family: var(--font-base);
+                    color: var(--color-golden);
                     text-decoration: none;
-                    text-transform: uppercase;
-                    font-size: 1rem;
-                    font-weight: 500;
-
-                    transition: all 0.3s ease-in-out;
+                    letter-spacing: 0.18em;
+                    text-transform: capitalize;
+                    font-size: 1.2rem;
+                    transition: 0.5s ease;
 
                     &:hover{
-                        color: var(--secondary-color);
+                        color: var(--white-color);
+                        border-bottom: 1px solid var(--color-golden);
                     }
                 }
             }
