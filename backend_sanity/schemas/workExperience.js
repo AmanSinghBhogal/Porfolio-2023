@@ -17,6 +17,14 @@ export default{
             name: "description",
             title: "Description",
             type: "string"
+        },
+        {
+            name: "imgurl",
+            title: "ImgURL",
+            type: "image",
+            options: {
+                hotspot: true
+            }
         }
     ]
 }
