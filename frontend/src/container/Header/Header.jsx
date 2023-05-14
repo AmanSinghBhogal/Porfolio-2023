@@ -25,17 +25,23 @@ const Header = () => {
         className="app__Header-info"
       >
         <div className="app__Header-badge">
-          <div className='badge-cmp app__flex'>
+          <motion.div 
+            whileHover={{ scale: 1.1 }}
+            className='badge-cmp app__flex'
+          >
               <span>👋</span>
               <div style={{marginLeft: 20}}>
                 <p className='p-text p-name'>Hi there, I am </p>
                 <h1 className='name'>Aman Singh Bhogal</h1>
               </div>
-          </div>
-          <div className='tag-cmp app__flex'>
+          </motion.div>
+          <motion.div 
+            whileHover={{ scale: 1.1 }}
+            className='tag-cmp app__flex'
+          >
             <p className='p-text'>Web Developer</p>
             <p className="p-text">Machine Learning</p>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
 
@@ -54,9 +60,13 @@ const Header = () => {
       >
         {
           languages.map((circle, index) => (
-            <div className='circle-cmp app__flex' key={`circle-${index}`}>
+            <motion.div 
+              className='circle-cmp app__flex' 
+              key={`circle-${index}`}
+              whileHover={{ scale: 1.1 }}
+            >
               <img src={circle} alt='languages' />
-            </div>
+            </motion.div>
           ))
         }
       </motion.div>
