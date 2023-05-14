@@ -1,5 +1,5 @@
 import React from 'react';
-var elements = ["Home","About","Projects","Skills","Testimonials","Contact"];
+var elements = ["home","about","projects","skills","testimonials","contact"];
 
 
 const NavigationDots = ({ active }) => {
@@ -12,7 +12,7 @@ const NavigationDots = ({ active }) => {
                 href={`#${item}`}
                 className='app__navigation-dot'
                 style={active === item ? {backgroundColor: '#DCCA87'} : {}}
-            />
+            > </a>
           ))
         }
     </div>

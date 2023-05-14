@@ -1,22 +1,20 @@
 import React from 'react';
-import {BsTwitter, BsInstagram } from 'react-icons/bs';
-import {FaLinkedin, FaGithub} from 'react-icons/fa';
+import { NavigationDots, SocialMedia } from '../components';
 
-const AppWrapper = () => {
+// HOC Stands for Higher Order Component 
+
+const AppWrapper = (Component, idName, classNames) => function HOC() {
   return (
-    <div className='app__social'>
-        <div>
-            <BsInstagram/>
+    <div id={idName} className={`app_container ${classNames}`}>
+        <SocialMedia />
+        <div className='app__wrapper app__flex'>
+            <Component />
+            <div className='copyright'>
+                <p className='p-text'>&copy;{(new Date().getFullYear())} | Aman Singh Bhogal</p>
+                <p className='p-text'>All Rights Reserved</p>
+            </div>
         </div>
-        <div>
-            <BsTwitter/>
-        </div>
-        <div>
-            <FaGithub/>
-        </div>
-        <div>
-            <FaLinkedin/>
-        </div>
+        <NavigationDots active={idName} />
     </div>
   )
 }

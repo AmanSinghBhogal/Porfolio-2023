@@ -7,18 +7,6 @@
     font-family: var(--font-base);
 }
 
-.page__title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--font-base);
-    color: var(--color-golden);
-    font-size: 64px;
-    line-height: 83.2px;
-    letter-spacing: 0.04em;
-    text-transform: capitalize;
-}
-
 .app_whitebg{
     background-color: var(--white-color);
 }
@@ -44,11 +32,11 @@
     flex: 1;
     width: 100%;
     flex-direction: column;
-    padding: 4rem 2rem;
+    // padding: 4rem 2rem;
 
     @media screen and (max-width: 450px) {
         padding: 4rem 1rem 2rem;
-}
+    }
 }
 
 .copyright {
@@ -61,8 +49,9 @@
     align-items: flex-end;
 
     p {
-        text-transform: uppercase;
-        color: var(--white-color);
+        text-transform: capitalize  ;
+        color: var(--color-golden);
+        font-size: 0.8rem;
     }
 }
 
@@ -127,7 +116,7 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background-color: var(--color-black);
+        background-color: var(--color-crimson);
         margin: 0.25rem 0;
         border: 1px solid var(--lightGray-color);
 
@@ -135,21 +124,19 @@
         justify-content: center;
         align-items: center;
 
-        transition: all 0.3s ease-in-out;
+        transition: all 0.1s ease-in-out;
 
         svg {
-        width: 15px;
-        height: 15px;
-        color: var(--gray-color);
-    }
+            object-fit: contain;
+            color: var(--color-black);
+        }
 
     &:hover {
-        background-color: var(--secondary-color);
+        cursor: pointer;
+        background-color: var(--color-golden);
         border-color: var(--secondary-color);
+        box-shadow: 0 0 20px rgba(#DCCA87, 0.4);
 
-        svg {
-            color: var(--white-color);
-        }
     }
 
     @media screen and (min-width: 2000px) {
@@ -178,13 +165,13 @@
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background-color: #cbcbcb;
+        background-color: var(--color-crimson);
         margin: 0.5rem;
 
         transition: background-color 0.2s ease-in-out;
 
         &:hover {
-        background-color: var(--secondary-color);
+        background-color: var(--color-golden);
         }
 
         @media screen and (min-width: 2000px) {
