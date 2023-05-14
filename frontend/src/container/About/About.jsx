@@ -1,27 +1,24 @@
 import React, {useState, useEffect } from 'react';
 import './About.scss';
-import { motion } from "framer-motion/dist/framer-motion";
-import { images } from '../../constants';
+import { motion } from "framer-motion";
+import  { client, urlFor } from '../../client';
 
-const abouts = [
-  {
-      title: 'Web Development',
-      description: "Lorem Epson",
-      imgurl: images.node
-  },
-  {
-      title: 'Machine Learning',
-      description: "Humpty Dumpty sat on a wall... he fell down.. ha ha ha",
-      imgurl: images.python
-  },
-  {
-      title: 'C++',
-      description: "Lorem Epson",
-      imgurl: images.cpp
-  }
-];
 
 const About = () => {
+  const [abouts, setabouts] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "about"]';
+    client.fetch(query)
+      .then((data) => 
+        {
+          setabouts(data)
+        }
+      )
+      .catch(console.error)
+  }, []);
+  
+
   return (
     <div id='#about' className='app__about' >
       <h2 className='head-text'>
@@ -41,7 +38,8 @@ const About = () => {
               className="app__about-item"
               key={item.title + index}
             >
-              <img src={item.imgurl} alt={item.title} />
+              {/* <img src={item.imgurl} alt={item.title} /> */}
+              <img src={urlFor(item.imgurl)} alt={item.title} />
               <h2 className='app__profiles-title' style={{marginTop: "20px"}}>{item.title}</h2>
               <p className='app__profiles-description' style={{marginTop: "10px"}}>{item.description}</p>
             </motion.div>

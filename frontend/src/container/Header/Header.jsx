@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Header.scss";
-import { motion } from "framer-motion/dist/framer-motion";
+import { motion } from "framer-motion";
 import { images } from '../../constants';
 
 const scaleVariant = {
