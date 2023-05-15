@@ -56,7 +56,7 @@
         width: 300px;
         flex-direction: column;
         margin: 2rem;
-        padding: 1rem;
+        padding: 0.5rem;
         border-radius: 0.5rem;
         border: 2px solid var(--color-golden);
         cursor: pointer;
@@ -136,7 +136,18 @@
     }
     p{
         font-family: var(--font-alt);
-        font-size: 1rem;
+        font-size: 0.95rem;
+        @media screen and (min-width:2000px) {
+            font-size: 1.1rem;
+        }
+    }
+    .project-title{
+        color: var(--color-golden);
+        text-align: center;
+        text-transform: uppercase;
+        @media screen and (min-width:2000px) {
+            font-size: 1.3rem;
+        }
     }
     .desc{
         height: 300px;

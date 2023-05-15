@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 import { AppWrapper } from '../../wrapper';
 import { urlFor, client } from '../../client';
 
-const Categories = ['all', 'web development', 'machine learning', 'c++', 'python'];
+// const Categories = ['all', 'web development', 'machine learning', 'c++', 'python'];
 
 const Projects = () => {
-
+  const [Categories, setCategories] = useState([]);
   const [activeFilter, setActiveFilter] = useState('all');
   const [animateCard, setAnimateCard] = useState({y: 0, opacity: 1});
   const [Projects, setProjects] = useState([]);
@@ -20,6 +20,18 @@ const Projects = () => {
 
     client.fetch(query)
     .then((data) => {
+      let categ = [];
+      // Fetching all the Tags available in the datbase
+      data.forEach((item) => {
+        item.tags.forEach((tag) => {
+          if(!categ.includes(tag)){
+            categ.push(tag);
+          }
+        });
+      });
+
+      // Removing duplicate tags added an ddd
+      setCategories(categ.sort());
       setProjects(data);
       setFilterProjects(data);
     })
@@ -29,7 +41,16 @@ const Projects = () => {
   
 
   const handleProjectsFilter = (category) => {
-
+      setActiveFilter(category);
+      setAnimateCard([{y: 100, opacity: 0}]);
+      setTimeout(() => {
+        setAnimateCard([{y: 0, opacity: 1}]);
+        if(category === 'all'){
+          setFilterProjects(Projects);
+        }else{
+          setFilterProjects(Projects.filter((project) => project.tags.includes(category)));
+        }
+      }, 500);
   }
 
   return (
@@ -92,7 +113,7 @@ const Projects = () => {
                 </motion.div>
               </div> 
               <div className='app__projects-content app__flex '>
-                <h4 className='bold-text'>{project.title}</h4>
+                <h4 className='bold-text project-title'>{project.title}</h4>
                 <p className='p-text desc' style={{marginTop: 10}}>{project.description}</p>
                 <div className='app__projects-tag app__flex'>
                   <p className='p-text'>{`#${project.tags[0]}`}</p>
