@@ -79,9 +79,8 @@ const Projects = () => {
       >
         {
           FilterProjects.map((project, index) => (
-            <a href={project.codelink} target='_blank' rel='noreferrer'>
+            <a href={project.codelink} target='_blank' rel='noreferrer' key={index}>
               <div
-                key={index}
                 className='app__projects-item app__flex'
               >
                 <div className='app__projects-img app__flex'>

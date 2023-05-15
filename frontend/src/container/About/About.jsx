@@ -13,7 +13,9 @@ const About = () => {
     client.fetch(query)
       .then((data) => 
         {
-          setabouts(data)
+          setabouts(data.sort((x, y) => {
+            return new Date(x._updatedAt) < new Date(y._updatedAt) ? 1 : -1
+          }))
         }
       )
       .catch(console.error)
