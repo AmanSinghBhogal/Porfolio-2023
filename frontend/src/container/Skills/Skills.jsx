@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import "./Skills.scss";
-import {AppWrapper} from '../../wrapper';
+import {AppWrapper, MotionWrap} from '../../wrapper';
 import { motion } from 'framer-motion';
 import { Tooltip } from 'react-tooltip';
 import  { client, urlFor } from '../../client';
@@ -97,4 +97,4 @@ const Skills = () => {
   )
 };
 
-export default AppWrapper(Skills,'skills');
+export default AppWrapper(MotionWrap(Skills),'skills');

@@ -3,9 +3,9 @@ import { NavigationDots, SocialMedia } from '../components';
 
 // HOC Stands for Higher Order Component 
 
-const AppWrapper = (Component, idName, classNames) => function HOC() {
+const AppWrapper = (Component, idName) => function HOC() {
   return (
-    <div id={idName} className={`app_container ${classNames}`}>
+    <div id={idName} className={`app_container`}>
         <SocialMedia />
         <div className='app__wrapper app__flex'>
             <Component />

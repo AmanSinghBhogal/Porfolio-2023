@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "./Projects.scss";
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-import { AppWrapper } from '../../wrapper';
+import { AppWrapper, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 
 // const Categories = ['all', 'web development', 'machine learning', 'c++', 'python'];
@@ -129,4 +129,4 @@ const Projects = () => {
   )
 }
 
-export default AppWrapper(Projects, 'projects');
+export default AppWrapper( MotionWrap(Projects), 'projects');
