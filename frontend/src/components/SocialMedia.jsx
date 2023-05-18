@@ -7,16 +7,16 @@ const SocialMedia = () => {
   return (
     <div className='app__social'>
         <motion.div whileHover={{ scale: 1.1 }}>
-            <BsInstagram/>
+            <a href="https://www.instagram.com/asb_0002/" target='_blank' rel="noreferrer"><BsInstagram/></a>
         </motion.div>
         <motion.div whileHover={{ scale: 1.1 }}>
-            <BsTwitter/>
+            <a href='https://twitter.com/AmanSinghBhoga1' target='_blank' rel="noreferrer"><BsTwitter/></a>
         </motion.div>
         <motion.div whileHover={{ scale: 1.1 }}>
-            <FaGithub/>
+            <a href="https://github.com/AmanSinghBhogal" target='_blank' rel="noreferrer"><FaGithub/> </a>
         </motion.div>
         <motion.div whileHover={{ scale: 1.1 }}>
-            <FaLinkedin/>
+            <a href='https://www.linkedin.com/in/aman-singh-bhogal/' target='_blank' rel="noreferrer"><FaLinkedin/></a>
         </motion.div>
     </div>
   )
