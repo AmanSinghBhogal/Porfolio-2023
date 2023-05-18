@@ -7,7 +7,7 @@ const AppWrapper = (Component, idName) => function HOC() {
   return (
     <div id={idName} className={`app_container`}>
         <SocialMedia />
-        <div className='app__wrapper app__flex'>
+        <div className='app__wrapper'>
             <Component />
             <div className='copyright'>
                 <p className='p-text'>&copy;{(new Date().getFullYear())} | Aman Singh Bhogal</p>

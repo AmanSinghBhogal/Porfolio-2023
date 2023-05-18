@@ -1,3 +1,105 @@
 .app__contact{
     color: var(--white-color);
+    flex: 1;
+    width: 100%;
+    padding: 6rem 0 1rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__footer-cards{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    margin: 4rem 2rem 2rem;
+
+    .app__footer-card{
+        min-width: 290px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 1rem 0;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        background-color: var(--color-crimson);
+        transition: all 0.1s ease-in-out;
+        img{
+            width: 40px;
+            height: 40px;
+            margin: 0 0.7rem;
+        }
+        a{
+            text-decoration: none;
+            font-weight: 500;
+            font-family: var(--font-alt);
+            color: var(--black-color);
+        }
+        &:hover{
+            box-shadow: 0 0 25px rgba(200,202,135, 0.7);
+        }
+
+        @media screen and (max-width: 450px) {
+            width: 100%;
+        }
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+        
+    }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin: 4rem 0 2rem;
+    }
+}
+
+.app__footer-form{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 2rem;
+
+    div{
+        width: 100%;
+        margin: 0.75rem 0;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        transition: all 0.1s ease-in-out;
+        input, textarea{
+            width: 100%;
+            padding: 0.95rem;
+            border: none;
+            border-radius: 7px;
+            background-color: var(--color-crimson);
+            color: var(--black-color);
+            font-weight: 500;
+            font-family: var(--font-alt);
+            outline: none;
+
+        }
+    }
+    button{
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        background-color: var(--color-golden);
+        border: none;
+        color: var(--black-color);
+        font-weight: 600;
+        font-size: 1rem;
+        margin: 2rem 0 0 0;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 0 0 25px rgba(200,202,135, 0.7);
+        }
+    }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin: 1rem 0;
+    }
 }
