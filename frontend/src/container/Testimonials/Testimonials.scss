@@ -1,11 +1,99 @@
 #testimonials{
     background-color: var(--black-color);
 }
+.testimonial-title{
+    margin-top: 6rem;
+}
 
 .app__testimonials{
-    color: var(--white-color);
+    flex: 1;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__testimonials-item{
+    width: 60%;
+    min-height: 320px;
+    background-color: var(--color-crimson);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0 0 25px rgba(200,202,135, 0.7);
+    p,h4{
+        color: var(--black-color);
+    }
+    p{
+        font-family: var(--font-alt);
+        font-size: 1rem;
+        letter-spacing: normal;
+        text-align: justify;
+        padding: 1rem;
+    }
+    @media screen and (max-width: 850px) {
+        width: 100%;
+        padding: 1rem;
+    }
+    @media screen and (min-width: 2000px) {
+        min-height: 420px;
+        img{
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+
+.app__testimonials-author{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1rem;
     img{
         width: 100px;
         height: 100px;
+        border-radius: 50%;
+        object-fit: contain;
+        margin-right: 1rem;
+    }
+    h4{
+        font-size: 1.3rem;
+    }
+    h5{
+        font-size: 1rem;
+        color: var(--color-gray);
+    }
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+    }
+    
+}
+
+.app__testimonials-btns{
+    margin-top: 1rem;
+    flex-direction: row;
+    div{
+        height: 50px;
+        width: 50px;
+        background-color: var(--color-crimson);
+        border-radius: 50%;
+        margin: 0 0.5rem;
+        cursor: pointer;
+        &:hover{
+            background-color: var(--color-golden);
+            svg{
+                color: var(--white-color);
+            }
+        }
+    }
+    svg{
+        width: 20px;
+        height: 20px;
+        color: var(--black-color);
     }
 }

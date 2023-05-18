@@ -20,8 +20,6 @@ const Testimonial = () => {
     )
     .catch(console.error);
 
-    console.log(Testimonials);
-
   }, []);
 
   const test = Testimonials[CurrentIndex];
@@ -35,30 +33,37 @@ const Testimonial = () => {
       {
         Testimonials.length && (
           <>
-              <div className='app__testimonials'>
-                <img src={urlFor(test.imageurl)} />
-                <div className='app__testimonials-content'> 
+            <h2 className='head-text testimonial-title'><span>Testimonials</span></h2>
+            <motion.div 
+              className="app__testimonials"
+              whileInView={{opacity: [0,1]}}
+              transition={{duration: 1}}
+            >
+                <div className='app__testimonials-item'>
+                  <div className='app__testimonials-author'>
+                    <img src={urlFor(test.imageurl)} alt={test.name}/>
+                    <div className='app__testimonials-author-details'>
+                      <h4 className='bold-text'>{test.name}</h4>
+                      <h5 className='p-text'>{test.company}</h5>
+                    </div>
+                  </div> 
                   <p className='p-text'>{test.feedback}</p>
-                  <div>
-                    <h4 className='bold-text'>{test.name}</h4>
-                    <h5 className='p-text'>{test.company}</h5>
+                </div>
+                <div className='app__testimonials-btns app__flex'>
+                  <div 
+                    className='app__flex'
+                    onClick={() => handleClick(CurrentIndex === 0? Testimonials.length - 1 : CurrentIndex - 1)}
+                  > 
+                    <HiChevronLeft />
+                  </div>
+                  <div 
+                    className='app__flex'
+                    onClick={() => handleClick(CurrentIndex === Testimonials.length - 1? 0 : CurrentIndex + 1)}
+                  > 
+                    <HiChevronRight />
                   </div>
                 </div>
-              </div>
-              <div className='app__testimonials-btns app__flex'>
-                <div 
-                  className='app__flex'
-                  onClick={() => handleClick(CurrentIndex === 0? Testimonials.length - 1 : CurrentIndex - 1)}
-                > 
-                  <HiChevronLeft />
-                </div>
-                <div 
-                  className='app__flex'
-                  onClick={() => handleClick(CurrentIndex === Testimonials.length - 1? 0 : CurrentIndex + 1)}
-                > 
-                  <HiChevronRight />
-                </div>
-              </div>
+            </motion.div>
           </>
         )
       }
