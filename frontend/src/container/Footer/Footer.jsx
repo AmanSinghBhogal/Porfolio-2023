@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import emailjs from 'emailjs-com';
 
 const Footer = () => {
-
+  
   const [FormData, setFormData] = useState({
     name: "",
     email: "",
