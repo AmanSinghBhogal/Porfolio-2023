@@ -3,7 +3,8 @@ import './Footer.scss';
 import { AppWrapper, MotionWrap } from '../../wrapper';
 import { images } from '../../constants';
 import { motion } from 'framer-motion';
-import { client } from '../../client';
+// import { client } from '../../client';
+import emailjs from 'emailjs-com';
 
 const Footer = () => {
 
@@ -21,22 +22,32 @@ const Footer = () => {
     setFormData({ ...FormData, [name] : value});
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setLoading(true);
     // receiving msgs using Sanity:
     const contact = {
-      _type: 'contact',
-      name: FormData.name,
-      email: FormData.email,
+      from_name: FormData.name,
+      email_id: FormData.email,
       message: FormData.msg
     }
 
     // Sending the msg to Sanity Backend Database.
-    client.create(contact)
-    .then(() => {
-      setLoading(false);
-      setSubmittedForm(true);
-    })
+    // client.create(contact)
+    // .then(() => {
+    //   setLoading(false);
+    //   setSubmittedForm(true);
+    // })
+
+    emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID, 
+      'template_x0k66i7', 
+      contact, 
+      process.env.REACT_APP_EMAILJS_TOKEN
+    ).then(() => {
+        setLoading(false);
+        setSubmittedForm(true);
+      });
+
     
   };
 
@@ -98,7 +109,7 @@ const Footer = () => {
               className='p-text' 
               onClick={handleSubmit}
             >
-              {Loading ? 'Sending' : 'Send Message'}
+              {Loading ? 'Sending...' : 'Send Message'}
             </motion.button>
         </div>
       }
