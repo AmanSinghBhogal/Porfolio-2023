@@ -66,6 +66,7 @@ const Skills = () => {
                 whileInView={{opacity: [0,1]}}
                 transition={{duration: 0.5}}
                 className='app__experience-list' 
+                data-tooltip-id={experience.work[0].name}
                 key={index}
               >
                   <motion.div className='app__skills-exp-img'>
@@ -75,7 +76,6 @@ const Skills = () => {
                     whileInView={{opacity: [0,1]}}
                     transition={{duration: 0.5}}
                     className='app__skills-exp-work'
-                    data-tooltip-id={experience.work[0].name}
                   >
                     <h4 className='p-text jobtitle'>{experience.work[0].name}</h4>
                     <p className='p-text company'>{experience.work[0].company}</p>
