@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className='app__Navbar'>
       <div className='app__Navbar-logo'>
-        <img src={images.logo} alt="Aman Singh Bhogal"/>
+        <a href='#home'><img src={images.logo} alt="Aman Singh Bhogal"/></a>
       </div>
       <ul className='app__Navbar-links'>
         {
