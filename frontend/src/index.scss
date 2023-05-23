@@ -10,19 +10,18 @@
   --color-gray: #545454;
   --color-crimson: #F5EFDB;
   --color-grey: #AAAAAA;
-
-  // --primary-color: #edf2f8;
   --primary-color: #0C0C0C;
-  // --secondary-color: #313bac;
   --secondary-color: #545454;
   --black-color: #030303;
   --lightGray-color: #e4e4e4;
   --gray-color: #6b7688;
   --brown-color: #46364a;
   --white-color: #ffffff;
+  --cursor-color: #DCCA87;
 }
 
 *{
+  cursor: none;
   box-sizing: border-box;
   padding: 0;
   margin: 0;

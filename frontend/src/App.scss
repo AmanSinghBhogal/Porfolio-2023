@@ -117,6 +117,12 @@
         align-items: center;
 
         transition: all 0.1s ease-in-out;
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+        }
 
         svg {
             object-fit: contain;
@@ -124,7 +130,7 @@
         }
 
     &:hover {
-        cursor: pointer;
+        // cursor: pointer;
         background-color: var(--color-golden);
         border-color: var(--secondary-color);
         box-shadow: 0 0 20px rgba(#DCCA87, 0.4);
