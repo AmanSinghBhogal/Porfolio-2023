@@ -8,7 +8,7 @@ This project is my software developer portfolio website designed to showcase my 
 
 Here are some screenshots of the website:
 
-  <img src="images/Portfolio%20Web.mp4" height="600"  alt="S1">
+  <img src="images/Portfolio%20Web.gif" height="600"  alt="S1">
 
 <div align="center">
   <img src="images/1.png" height="600"  alt="S1">
