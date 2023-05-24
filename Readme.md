@@ -4,6 +4,21 @@
 </div>
 This project is my software developer portfolio website designed to showcase my skills, projects, and experience. It provides an interactive and visually appealing interface for visitors to learn more about my work and contact me. The website is currently hosted at https://www.amansinghbhogal.me
 
+## Screenshots
+
+Here are some screenshots of the website:
+
+  <img src="images/Portfolio%20Web.mp4" height="600"  alt="S1">
+
+<div align="center">
+  <img src="images/1.png" height="600"  alt="S1">
+  <img src="images/2.png" height="600"  alt="S2">
+  <img src="images/3.png" height="600"  alt="S3">
+  <img src="images/4.png" height="600"  alt="S4">
+  <img src="images/5.png" height="600"  alt="S5">
+  <img src="images/6.png" height="600"  alt="S6">
+</div>
+
 ## Installation
 
 To run this project locally, follow these steps:
