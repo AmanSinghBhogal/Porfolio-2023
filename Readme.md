@@ -10,7 +10,7 @@ Here are some screenshots of the website:
 
 
 <div align="center">
-    <img src="images/Portfolio.gif" height="600"  alt="S1">
+    <img src="images/Portfolio.gif" height="500"  alt="S1">
   <img src="images/1.png" height="600"  alt="S1">
   <img src="images/2.png" height="600"  alt="S2">
   <img src="images/3.png" height="600"  alt="S3">
